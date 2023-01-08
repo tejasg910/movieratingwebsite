@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+$btn-color : #ed0e42;
+
+@mixin flex-vertically-horizontaly-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+
+@mixin flex-justify-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin sign-in-button{  
+
+    background-color: $btn-color;
+    transition: 0.2s all;
+    color: white;
+    padding:  5px 8px;
+
+    font-size: 1.2rem;
+    border: 1px solid rgb(100, 96, 96);
+    cursor: pointer;
+
+
+    &:hover{
+
+        background-color: transparent;
+    
+        border: 1px solid white;
+    }
+}
+
+@mixin sign-up-button {
+
+    background-color: rgb(30, 195, 30);
+    transition: 0.2s all;
+    color: white;
+    padding: 5px 8px;
+ 
+    font-size: 1.2rem;
+    border: 1px solid rgb(100, 96, 96);
+    cursor: pointer;
+
+
+    &:hover {
+
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+
+    }
+}
+
+.navbar {
+    z-index: 10;
+    width: 100vw;
+    position:fixed;
+
+    padding: 0 20px;
+
+
+        // background-color: rgb(247, 241, 241);
+        background-color: transparent;
+    
+    @include flex-justify-between();
+
+    .logo img{
+        height: 7vh;
+
+    }
+
+.sign-in{
+    @include sign-in-button();
+
+   
+}
+.sign-up{
+    @include sign-up-button()
+}
+
+}
+
+main{
+    .cover{
+      
+        position: relative;
+         img {
+                width: 100%;
+                height: 100vh;
+                filter: brightness(30%);
+                z-index: -10;
+            }
+        
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+           
+                align-items: center;
+                position: absolute;
+                
+               color: white;
+               top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                
+                z-index: 100;
+
+                h1{
+                    font-size: 4rem;
+                }
+
+                input{
+                    margin-top: 2rem;
+                    font-size: 1.5rem;
+                    width: 70vw;
+                    padding: 15px;
+                    outline: none;
+                    border-radius: 10px;
+                }
+                .searchbtn{
+                    background-color: $btn-color;
+                    padding:  5px 20px;
+                    font-size: 1.7rem;
+                    color: white;
+                    border: white;
+                    margin-top: 20px;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    &:hover{
+
+                        background-color: #e04468;
+                    }
+
+                }
+
+            }
+
+          
+    }
+
+          .upcoming {
+
+            @media screen and (max-width: 1500px) {
+                    flex-direction: column;
+                }
+            padding: 10px;
+            img{
+                width: 100%;
+                border-radius: 10px;
+            }
+            color: white;
+            background-color: rgb(24, 24, 24);
+              @include flex-vertically-horizontaly-center();
+              justify-content: space-around;
+              font-size: 1.4rem;
+
+              h2{
+                margin: 5px;
+                font-size: 3rem;
+              }
+
+          }
+
+          .top10{
+            padding-top: 10px;
+            background-color: rgb(33, 33, 33);
+           
+           
+            .box{
+              
+                color: white;
+                
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .items{
+                    @media screen and (max-width: 700px) {
+                    
+                            width: 90%;
+                    
+                        }
+                    margin: 10px;
+                    border-radius: 10px;
+            box-shadow: -2px 3px 28px -10px rgba(242, 234, 242, 1);                    display: inline-block;
+
+                    width: 40vw;
+                transition:  0.2s all;
+                &:hover{
+                   transform: scale(1.02);
+                }
+                    img {
+                            width: 100%;
+                            height: 20rem;
+
+                        }
+                }
+                
+               .boxcontent{
+                padding: 1rem;
+               }
+              
+            }
+           
+
+          }
+
+                  
+    
+}
+
+footer{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(29, 27, 27);
+}
+

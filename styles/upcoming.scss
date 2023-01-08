@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+$btn-color : #ed0e42;
+$text-color: rgb(184, 206, 169);
+
+@mixin flex-vertically-horizontaly-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+@mixin flex-justify-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin sign-in-button {
+
+    background-color: $btn-color;
+    transition: 0.2s all;
+    color: white;
+    padding: 5px 8px;
+
+    font-size: 1.2rem;
+    border: 1px solid rgb(100, 96, 96);
+    cursor: pointer;
+
+
+    &:hover {
+
+        background-color: transparent;
+
+        border: 1px solid white;
+    }
+}
+
+@mixin sign-up-button {
+
+    background-color: rgb(30, 195, 30);
+    transition: 0.2s all;
+    color: white;
+    padding: 5px 8px;
+
+    font-size: 1.2rem;
+    border: 1px solid rgb(100, 96, 96);
+    cursor: pointer;
+
+
+    &:hover {
+
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+
+    }
+}
+
+body{
+background: rgb(22, 31, 30);
+    background: linear-gradient(90deg, rgba(22, 31, 30, 1) 0%, rgba(17, 31, 19, 1) 32%, rgba(15, 14, 97, 1) 92%);
+.navbar {
+    background: rgb(22, 31, 30);
+        background: linear-gradient(90deg, rgba(22, 31, 30, 1) 0%, rgba(17, 31, 19, 1) 32%, rgba(15, 14, 97, 1) 92%);
+    z-index: 10;
+    width: 100%;
+   
+
+    padding: 0 20px;
+
+
+    // background-color: rgb(247, 241, 241);
+    background-color: transparent;
+
+    @include flex-justify-between();
+
+    .logo img {
+        height: 7vh;
+
+    }
+
+    .sign-in {
+        @include sign-in-button();
+@media screen and (max-width: 400px) {
+        display: none;
+    }
+
+    }
+
+    .sign-up {
+       
+        @include sign-up-button();
+        @media screen and (max-width: 400px) {
+                display: none;
+            }
+    }
+
+    .homebtn{
+        padding: 7px 15px;
+        background-color: transparent;
+        transition: 0.2s all;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer;
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+
+    }
+}
+
+main{
+    padding: 20px;
+    // height: 100v;
+    background: rgb(22, 31, 30);
+        background: linear-gradient(90deg, rgba(22, 31, 30, 1) 0%, rgba(17, 31, 19, 1) 32%, rgba(15, 14, 97, 1) 92%);
+    .notfound{
+        color: white;
+        text-align: center;
+    }
+
+    .searchmovie{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input{
+            padding: 10px;
+            font-size: 1.2rem;
+            width: 40vw;
+            outline: none;
+        }
+        button{
+            padding: 10px;
+                font-size: 1.2rem;
+                transition: 0.2s all;
+                cursor: pointer;
+                &:hover{
+                    background-color: transparent;
+                    border: 1px solid white;
+                    color: white;
+                }
+        }
+    }
+        .maincontent{
+
+            .movie{
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+              *{
+margin:  10px  0;
+               }  
+               
+               @media screen and (max-width: 650px) {
+                flex-direction: column;
+               }
+               .imagepart{
+                img{
+                    height: 100%;
+                }
+               }
+               .contentpart{
+                padding-left: 1rem;
+
+                .watchnow{
+                    display: flex;
+                    justify-content: center;
+                   
+                    margin: auto;
+                    border: 1px solid white;
+                    padding: 10px 25px;
+                    background-color: transparent;
+                    transition: 0.2s all;
+                    color: white;
+                    cursor: pointer;
+
+                    &:hover{
+
+                        background-color: #ed0e42;
+                    }
+                }
+               
+                .title{
+                    font-size: 1.9rem;
+                  
+                }
+                .writer{
+                    span{
+                        color: $text-color;
+                    }
+                }
+                .year{
+                    color: rgb(125, 120, 120);
+                }
+                .release{
+                    font-size: 0.8rem;
+                    span{
+                        color: $text-color;
+                    }
+                }
+
+                .description{
+                    p{
+                        color: $text-color;
+                    }
+                }
+                .country {
+                    span{
+                        font-weight: bold;
+                    }
+                }
+                .language{
+                   span{
+                    color: $text-color;
+                   }
+                }
+                .gnre{
+                    span{
+                        color: $text-color;
+                    }
+                }
+                .actors{
+                    span{
+                        color: $text-color;
+                    }
+                }
+                .duration{
+                    span{
+                        color: $text-color;
+                    }
+                }
+                .rating{
+                        i{
+                            color: rgb(232, 232, 28);
+                        }
+                        span{
+                            color: $text-color;
+                        }
+                }
+                
+            }
+            }
+        }
+}
+
+}
+
+.flex{
+    display: flex;
+}
+.justify-around{
+    justify-content: space-around;
+}
+
+
+
+
+

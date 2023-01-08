@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.navbar {
+  z-index: 10;
+  width: 100vw;
+  position: fixed;
+  padding: 0 20px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo img {
+  height: 7vh;
+}
+.navbar .sign-in {
+  background-color: #ed0e42;
+  transition: 0.2s all;
+  color: white;
+  padding: 5px 8px;
+  font-size: 1.2rem;
+  border: 1px solid rgb(100, 96, 96);
+  cursor: pointer;
+}
+.navbar .sign-in:hover {
+  background-color: transparent;
+  border: 1px solid white;
+}
+.navbar .sign-up {
+  background-color: rgb(30, 195, 30);
+  transition: 0.2s all;
+  color: white;
+  padding: 5px 8px;
+  font-size: 1.2rem;
+  border: 1px solid rgb(100, 96, 96);
+  cursor: pointer;
+}
+.navbar .sign-up:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+main .cover {
+  position: relative;
+}
+main .cover img {
+  width: 100%;
+  height: 100vh;
+  filter: brightness(30%);
+  z-index: -10;
+}
+main .cover .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+main .cover .content h1 {
+  font-size: 4rem;
+}
+main .cover .content input {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  width: 70vw;
+  padding: 15px;
+  outline: none;
+  border-radius: 10px;
+}
+main .cover .content .searchbtn {
+  background-color: #ed0e42;
+  padding: 5px 20px;
+  font-size: 1.7rem;
+  color: white;
+  border: white;
+  margin-top: 20px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+main .cover .content .searchbtn:hover {
+  background-color: #e04468;
+}
+main .upcoming {
+  padding: 10px;
+  color: white;
+  background-color: rgb(24, 24, 24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 1500px) {
+  main .upcoming {
+    flex-direction: column;
+  }
+}
+main .upcoming img {
+  width: 100%;
+  border-radius: 10px;
+}
+main .upcoming h2 {
+  margin: 5px;
+  font-size: 3rem;
+}
+main .top10 {
+  padding-top: 10px;
+  background-color: rgb(33, 33, 33);
+}
+main .top10 .box {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .top10 .box .items {
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: -2px 3px 28px -10px rgb(242, 234, 242);
+  display: inline-block;
+  width: 40vw;
+  transition: 0.2s all;
+}
+@media screen and (max-width: 700px) {
+  main .top10 .box .items {
+    width: 90%;
+  }
+}
+main .top10 .box .items:hover {
+  transform: scale(1.02);
+}
+main .top10 .box .items img {
+  width: 100%;
+  height: 20rem;
+}
+main .top10 .box .boxcontent {
+  padding: 1rem;
+}
+
+footer {
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgb(29, 27, 27);
+}

@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: rgb(22, 31, 30);
+  background: linear-gradient(90deg, rgb(22, 31, 30) 0%, rgb(17, 31, 19) 32%, rgb(15, 14, 97) 92%);
+}
+body .navbar {
+  background: rgb(22, 31, 30);
+  background: linear-gradient(90deg, rgb(22, 31, 30) 0%, rgb(17, 31, 19) 32%, rgb(15, 14, 97) 92%);
+  z-index: 10;
+  width: 100%;
+  padding: 0 20px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .navbar .logo img {
+  height: 7vh;
+}
+body .navbar .sign-in {
+  background-color: #ed0e42;
+  transition: 0.2s all;
+  color: white;
+  padding: 5px 8px;
+  font-size: 1.2rem;
+  border: 1px solid rgb(100, 96, 96);
+  cursor: pointer;
+}
+body .navbar .sign-in:hover {
+  background-color: transparent;
+  border: 1px solid white;
+}
+@media screen and (max-width: 400px) {
+  body .navbar .sign-in {
+    display: none;
+  }
+}
+body .navbar .sign-up {
+  background-color: rgb(30, 195, 30);
+  transition: 0.2s all;
+  color: white;
+  padding: 5px 8px;
+  font-size: 1.2rem;
+  border: 1px solid rgb(100, 96, 96);
+  cursor: pointer;
+}
+body .navbar .sign-up:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+@media screen and (max-width: 400px) {
+  body .navbar .sign-up {
+    display: none;
+  }
+}
+body .navbar .homebtn {
+  padding: 7px 15px;
+  background-color: transparent;
+  transition: 0.2s all;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+}
+body .navbar .homebtn:hover {
+  background-color: white;
+  color: black;
+}
+body main {
+  padding: 20px;
+  background: rgb(22, 31, 30);
+  background: linear-gradient(90deg, rgb(22, 31, 30) 0%, rgb(17, 31, 19) 32%, rgb(15, 14, 97) 92%);
+}
+body main .notfound {
+  color: white;
+  text-align: center;
+}
+body main .searchmovie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .searchmovie input {
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 40vw;
+  outline: none;
+}
+body main .searchmovie button {
+  padding: 10px;
+  font-size: 1.2rem;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+body main .searchmovie button:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+body main .maincontent .movie {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .maincontent .movie * {
+  margin: 10px 0;
+}
+@media screen and (max-width: 650px) {
+  body main .maincontent .movie {
+    flex-direction: column;
+  }
+}
+body main .maincontent .movie .imagepart img {
+  height: 100%;
+}
+body main .maincontent .movie .contentpart {
+  padding-left: 1rem;
+}
+body main .maincontent .movie .contentpart .watchnow {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border: 1px solid white;
+  padding: 10px 25px;
+  background-color: transparent;
+  transition: 0.2s all;
+  color: white;
+  cursor: pointer;
+}
+body main .maincontent .movie .contentpart .watchnow:hover {
+  background-color: #ed0e42;
+}
+body main .maincontent .movie .contentpart .title {
+  font-size: 1.9rem;
+}
+body main .maincontent .movie .contentpart .writer span {
+  color: rgb(184, 206, 169);
+}
+body main .maincontent .movie .contentpart .year {
+  color: rgb(125, 120, 120);
+}
+body main .maincontent .movie .contentpart .release {
+  font-size: 0.8rem;
+}
+body main .maincontent .movie .contentpart .release span {
+  color: rgb(184, 206, 169);
+}
+body main .maincontent .movie .contentpart .description p {
+  color: rgb(184, 206, 169);
+}
+body main .maincontent .movie .contentpart .country span {
+  font-weight: bold;
+}
+body main .maincontent .movie .contentpart .language span {
+  color: rgb(184, 206, 169);
+}
+body main .maincontent .movie .contentpart .gnre span {
+  color: rgb(184, 206, 169);
+}
+body main .maincontent .movie .contentpart .actors span {
+  color: rgb(184, 206, 169);
+}
+body main .maincontent .movie .contentpart .duration span {
+  color: rgb(184, 206, 169);
+}
+body main .maincontent .movie .contentpart .rating i {
+  color: rgb(232, 232, 28);
+}
+body main .maincontent .movie .contentpart .rating span {
+  color: rgb(184, 206, 169);
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-around {
+  justify-content: space-around;
+}

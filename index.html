@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Pop up</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./assets/logo.PNG" alt="">
+            </div>
+            <div class="btn">
+                <button class="sign-in">Sign in</button>
+                <button class="sign-up">Sign up</button>
+
+            </div>
+        </nav>
+        <main>
+            <div class="cover">
+                <div>
+                    <img src="./assets/netflix-image.jpg" alt="">
+
+                </div>
+                <div class="content">
+                    <h1>Search the Movies </h1>
+                    <p>Get all information about the movies</p>
+                    <input type="text" id="searchinput" placeholder="Lets get start">
+                    <a> <button class="searchbtn" id="searchbtn">Search</button></a>
+                </div>
+            </div>
+            <div class="upcoming">
+                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+
+                    <h2>Top Upcoming Movies </h2>
+                    <p>Here are the top movies </p>
+
+                </div>
+                <div data-aos="fade-left">
+                    <img src="/assets/netflix-inner.jpg" alt="">
+                </div>
+
+            </div>
+
+            <div id="top10" class="top10">
+                <div id="movie" class="box">
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        Made by tejas giri
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+
+        AOS.init();
+    </script>
+    <script src="/index.js"></script>
+</body>
+
+</html>
